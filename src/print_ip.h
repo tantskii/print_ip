@@ -23,7 +23,7 @@ void print_ip(const T& address, std::ostream& os) {
 \param[out] os Поток вывода
 \param[in] address ip-адрес
 */
-template <typename T, typename std::enable_if_t<std::is_integral_v<T>, bool> Fake = true>
+template <typename T, typename std::enable_if_t<std::is_integral<T>::value, bool> Fake = true>
 void print_ip(const T& address, std::ostream& os) {
     uint8_t const * buffer = reinterpret_cast<uint8_t const *>(&address);
     size_t value_size = sizeof(T);
