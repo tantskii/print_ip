@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">print_ip
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.6</span>
    </div>
   </td>
  </tr>
@@ -91,7 +91,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">print_ip.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="my__type__traits_8h_source.html">my_type_traits.h</a>&quot;</code><br />
+
+<p>Заголовочный файл с реализацией функций печати ip-адреса через механизм SFINAE.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="my__type__traits_8h_source.html">my_type_traits.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for print_ip.h:</div>
 <div class="dyncontent">
@@ -113,7 +117,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a47d1dfdcddb1f3d21afd88c7199ef607"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a47d1dfdcddb1f3d21afd88c7199ef607">print_ip</a> (const T &amp;address, std::ostream &amp;os)</td></tr>
 <tr class="separator:a47d1dfdcddb1f3d21afd88c7199ef607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Заголовочный файл с реализацией функций печати ip-адреса через механизм SFINAE. </p>
+<p>Данный файл содержит в себе реализацию печати в поток вывода ip-адреса, хранимого в контейнере (std::list, std::vector), Строке (std::string), а также в целочисленном виде </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a47d1dfdcddb1f3d21afd88c7199ef607"></a>
 <div class="memitem">
 <div class="memproto">
@@ -124,7 +131,7 @@ template&lt;typename T , typename std::enable_if_t&lt; is_container_v&lt; T &gt;
           <td class="memname">void print_ip </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>address</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
