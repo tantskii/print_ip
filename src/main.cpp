@@ -1,6 +1,7 @@
+#include "print_ip.h"
+
 #include <iostream>
 #include <sstream>
-#include "print_ip.h"
 
 int main() {
     print_ip(char(-1), std::cout);

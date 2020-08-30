@@ -1,4 +1,14 @@
+/*!
+\file
+\brief Заголовочный файл с реализацией функций печати ip-адреса через механизм SFINAE
+
+Данный файл содержит в себе реализацию печати в поток вывода ip-адреса, хранимого в контейнере (std::list, std::vector),
+Строке (std::string), а также в целочисленном виде
+*/
+
 #pragma once
+
+#include <iostream>
 
 #include "my_type_traits.h"
 
@@ -41,6 +51,6 @@ void print_ip(const T& address, std::ostream& os) {
 \param[in] address ip-адрес
 */
 template <typename T, typename std::enable_if_t<is_string_v<T>, bool> Fake = true>
-void print_ip(const T& x, std::ostream& os) {
-    os << x << '\n';
+void print_ip(const T& address, std::ostream& os) {
+    os << address << '\n';
 }
